@@ -1,0 +1,130 @@
+.container{
+  display: flex;
+  margin-top: 80px;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+.side-menu {
+  width: 45%;
+  margin-top: 20px;
+  padding-left: 5px;
+  line-height:  20px;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.side-menu ul {
+  list-style: none;
+  align-items: baseline;
+  padding: 5px;
+}
+
+.side-menu ul li {
+  margin-bottom: 10px;
+  width: 90%;
+}
+.menu-item {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 5px 0;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+.side-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  display: block;
+  position: relative;
+}
+.side-menu ul li a.active::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: blue;
+  border-radius: 50%;
+}
+.side-menu ul li a:hover {
+  color: blue;
+}
+
+.box{
+  width: 80%; 
+  margin-right: -20px;
+  padding-right: 20px;
+  padding-left: 70px;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 25px;
+}
+.sidebar {
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Enable scrolling on the sidebar */
+  height: 100%; /* Make sure sidebars take full height */
+}
+
+.sidebar-left {
+  position: relative;
+  left: 40px; /* Shift the sidebar to the right by 20px */
+  margin-right: 0px;
+}
+
+.sidebar-right {
+  margin-left: 30px;
+  position: relative;
+  right: -10px; 
+}
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 40px 55px;
+}
+
+.footer h3 {
+  margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.footer .social-icons a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer .social-icons a:hover {
+  color: darkgray;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-right: 10px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 35px;
+  font-size: 14px;
+}

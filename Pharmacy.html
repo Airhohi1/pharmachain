@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy|Become our Partner</title>
+    <link rel="stylesheet" href="Pharmacy.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <br>
+            <br>
+            <br>
+             <a href="#" class="back-button">&#8592;</a>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+              <nav>
+                <a href="#">Home</a> &gt; <a href="#">Partner Sign Up</a> &gt; <a href="#">PHARMACY</a>
+             </nav>
+            <br>
+            <br>
+            <h2>Bring Pharmachain <br> Solution Close To You</h2>
+            <br>
+            <br>
+            <p>Collaborate with us to provide <br> medications for your client, tell us what <br> you want and how we can help you <br> make ordering drugs for clients easy.</p>
+        </div>
+      <div class="box">
+        <h1>Sign Up Details</h1>
+        <form action="/submit-signup" method="post"></form>
+         <div class="form">
+            <div class="form-group">
+                <label for="name-of-pharmacy">Name of Pharmacy</label>
+                <input type="text" id="name-of-pharmacy" name="name-of-pharmacy">
+             </div>
+             <div class="form-group">
+                <label for="name-of-contact-person">Name of contact person</label>
+                <input type="text" id="name-of-contact-person" name="name-of-contact-person">
+            </div>
+         </div>
+         <div class="forms">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">                
+              </div>
+              <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number">
+             </div>
+         </div>
+         <div class="lon-form">
+            <div class="form-group">
+                <label for="license-number">License Number</label>
+                <input type="text" id="license-number" name="license-number">
+             </div>
+            </div>
+            <h2>Are you the owner of this pharmacy?</h2>
+            <div class="pharmacy-option">
+                <div class="Pharm-owner">
+                    <input type="radio" id="check-yes" name="Pharm-owner" checked/>
+                    <label for="check-yes">Yes</label>
+                </div>
+                <div class="Pharm-owner">
+                    <input type="radio" id="check-no" name="Pharm-owner"/>
+                    <label for="check-no">No</label>
+                </div>
+            </div>
+            <div class="las-form">
+                <div class="form-group"> 
+                    <label for="contact-info">Contact Information</label>
+                    <select id="state" name="state" onchange="populateLGAs()">
+                      <option value=""disabled selected>Search States..</option>
+                      <option value="abia">Abia</option>
+                      <option value="adamawa">Adamawa</option>
+                      <option value="akwa-ibom">Akwa Ibom</option>
+                      <option value="anambra">Anambra</option>
+                      <option value="bauchi">Bauchi</option>
+                      <option value="bayelsa">Bayelsa</option>
+                      <option value="benue">Benue</option>
+                      <option value="borno">Borno</option>
+                      <option value="cross-river">Cross River</option>
+                      <option value="delta">Delta</option>
+                      <option value="ebonyi">Ebonyi</option>
+                      <option value="edo">Edo</option>
+                      <option value="ekiti">Ekiti</option>
+                      <option value="enugu">Enugu</option>
+                      <option value="gombe">Gombe</option>
+                      <option value="imo">Imo</option>
+                      <option value="jigawa">Jigawa</option>
+                      <option value="kaduna">Kaduna</option>
+                      <option value="kano">Kano</option>
+                      <option value="katsina">Katsina</option>
+                      <option value="kebbi">Kebbi</option>
+                      <option value="kogi">Kogi</option>
+                      <option value="kwara">Kwara</option>
+                      <option value="lagos">Lagos</option>
+                      <option value="nasarawa">Nasarawa</option>
+                      <option value="niger">Niger</option>
+                      <option value="ogun">Ogun</option>
+                      <option value="ondo">Ondo</option>
+                      <option value="osun">Osun</option>
+                      <option value="oyo">Oyo</option>
+                      <option value="plateau">Plateau</option>
+                      <option value="rivers">Rivers</option>
+                      <option value="sokoto">Sokoto</option>
+                      <option value="taraba">Taraba</option>
+                      <option value="yobe">Yobe</option>
+                      <option value="zamfara">Zamfara</option>
+                  </select>           
+                  </div>
+                    <div class="form-group">
+                    <input type="text" id="lga" name="lga" placeholder="Select LGA (Must choose a state first)">
+                    </div>
+                </div>
+                <div class="nex-form">
+                    <div class="form-group">
+                 <input type="text" id="street-address" name="street-address" placeholder="Street Address">
+                    </div>
+            </div>
+            <h3>Pharmachain is free to use but we take 10% of the cost only when a sale is made. Do you agree to this?</h3>
+            <div class="pharmacy-request">
+                <div class="Pharm-owner">
+                    <input type="radio" id="check-yes" name="Pharm-owner" checked/>
+                    <label for="check-yes">Yes</label>
+                </div>
+                <div class="Pharm-owner">
+                    <input type="radio" id="check-no" name="Pharm-owner"/>
+                    <label for="check-no">No</label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Apply">
+                </div>
+                <div class="terms">
+                    By Clicking 'Apply', you agree to our <a href="#">Terms and Conditions</a>
+                </div>
+                <div class="login-link">
+                    Already have an account? <a href="#">Login</a>
+                </div>
+      </div>
+   </div>
+</body>
+</html>

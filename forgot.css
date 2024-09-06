@@ -1,0 +1,139 @@
+body{
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+}
+.main{
+    padding-left: 45px;
+}
+.back-button {
+    display: inline-block; /* Makes the element respect width and height */
+    color: black !important;
+    width: 40px;           /* Set the width of the circle */
+    height: 40px;          /* Set the height of the circle */
+    line-height: 40px;     /* Center the text vertically */
+    text-align: center;    /* Center the text horizontally */
+    border-radius: 50%;    /* Creates a circular shape */
+    border: 2px;           /* Add a border */
+    font-size: 24px;       /* Adjust the font size */
+    background-color: white;
+}
+.main a{
+    color: white;
+    font-size: 1.7em;
+    text-decoration: none;
+    margin-left: 20px; 
+    
+}
+.main a:hover{
+    text-decoration: underline;
+} 
+.main h1{
+    font-weight: lighter;
+    font-size: 30px;
+    font-family: poppins, sans-serif;
+}
+.main h2{
+    font-size: 32px;
+    font-family: poppins, sans-serif;
+}
+.box{
+    width: 55%;
+    height: 150vh;
+    background-color:  #007bff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 50%;
+    margin-top: 0;
+    position: fixed;
+    overflow-y: hidden;
+}
+.Details{
+    width: 50%;
+    background-color: white;
+    height: 45vh;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    border-top: 2em;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25% ;
+    left: 42%; /* Center it horizontally relative to .main */
+    border-radius: 8px;
+    z-index: 2; /* In front of .main */
+}
+.Details p{
+    align-items: center;
+    font-family: poppins, sans-serif;
+    margin-left: 40%;
+    font-size: 1em;
+}
+.Details h1{
+    font-size: 1em;
+    font-family: poppins, sans-serif;
+    font-weight: lighter;
+}
+.lon-form{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+    font-family: Poppins, sans-serif; 
+    font-size: 16px;
+    
+}
+.lon-form .form-group{
+    display: flex;
+    width: 120%;
+    flex-direction: column;
+    font-family: Poppins, sans-serif; 
+    font-size: 16px;
+}
+.lon-form .form-group input{
+    position: relative;
+    height: 3em;
+    border-radius: 6px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 1rem;
+    text-wrap: 2px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.button {  
+    padding: 10px 20px;  
+    background-color: #007bff;  
+    color: white;  
+    border: none;  
+    align-items: center;
+    outline: none;
+    border-radius: 40px;  
+    cursor: pointer;  
+    font-size: 1.5em;
+    height: 1em;
+    margin-top: 1em;
+    margin-left: 200px;
+    width: 70px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}  
+.button:hover {
+    background-color: #0056b3; /* Change to a darker blue on hover */
+}
+.button input {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    width: 95%;
+    height: 95%;
+}

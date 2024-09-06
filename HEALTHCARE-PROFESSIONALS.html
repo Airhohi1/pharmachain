@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTHCARE-PROFESSIONALS</title>
+    <link rel="stylesheet" href="Healthcare.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <br>
+            <br>
+            <br>
+             <a href="#" class="back-button">&#8592;</a>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+              <nav>
+                <a href="#">Home</a> &gt; <a href="#">Partner Sign Up</a> &gt; <a href="#">Healthcare</a>
+             </nav>
+            <br>
+            <br>
+            <h2>Bring Pharmachain <br> Solution Close To You</h2>
+            <br>
+            <br>
+            <p>Collaborate with us to provide <br> medications for your client, tell us what <br> you want and how we can help you <br> make ordering drugs for clients easy.</p>
+        </div>
+      <div class="box">
+            <h1>Sign Up Details</h1>
+            <form action="/submit-signup" method="post"></form>
+            <div class="form">
+                    <div class="form-group"> 
+                      <label for="title">Title</label>
+                      <select id="title" name="title" onchange="titles">
+                        <option value=""disabled selected>Select...</option>
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="miss">Miss</option>
+                        <option value="pharmacist">Pharmacist</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="nurse">Nurse</option>
+                      </select>
+                    </div>
+            </div>
+            <div class="nex-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name">
+                 </div>
+                 <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+            <div class="forms">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">                
+                  </div>
+                  <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number">
+                 </div>
+            </div>
+            <div class="las-form">
+                <div class="form-group">
+                    <label for="license-number">License Number</label>
+                    <input type="text" id="license-number" name="license-number">
+                 </div>
+                 <div class="form-group"> 
+                    <label for="current-area-of-practise">Current Area of Practise</label>
+                    <select id="area" name="current-area-of-practise" onchange="area">
+                      <option value=""disabled selected>Select...</option>
+                      <option value="community">Community</option>
+                      <option value="hospital">Hospital</option>
+                      <option value="academic">Academic</option>
+                      <option value="industry">Industry</option>
+                    </select>
+                 </div>
+            </div>
+            <div class="fin-form">
+                <div class="form-group">
+                <label for="current-place-of-work">Current Place of Work</label>
+                <input type="text" id="current-place-of-work" name="current-place-of-work">
+                </div>
+                <div class="form-group">
+                    <label for="patients">Number of patients in your care</label>
+                    <select id="text" name="patients" onchange="Number">
+                      <option value=""disabled selected>1-500,501-1000,1001-2000,etc...</option>
+                      <option value="1-500">1-500</option>
+                      <option value="501-1000">501-1000</option>
+                      <option value="1001-2000">1001-2000</option>
+                      <option value="2001-5000">2001-5000</option>
+                      <option value="5000 and Above">5000 and Above</option>
+                    </select>
+                </div>
+            </div>
+            <h2>Note that application is subject to a manual verification via Zoom</h2> 
+            <div class="button">
+                <input type="submit" value="Proceed">
+                </div>
+                <div class="terms">
+                    By Clicking 'Proceed', you agree to our <a href="#">Terms and Conditions</a>
+                </div>
+                <div class="login-link">
+                    Already have an account? <a href="#">Login</a>
+                </div>
+        </div>         
+    </div>    
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar-left {
+    width: 400px; /* Smaller sidebar */
+    left: 0;
+    padding-top: 3em;
+    font-size: 3em;
+}
+
+.sidebar-right {
+    width: 800px; /* Larger sidebar */
+    right: 0;
+    padding-top: 3em;
+    font-size: 3em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
