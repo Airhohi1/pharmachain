@@ -58,24 +58,24 @@
          <div class="lon-form">
             <div class="form-group">
                 <label for="license-number">License Number</label>
-                <input type="text" id="license-number" name="LicenseNumber">
+                <input type="text" id="license-number" name="LicenseFile">
              </div>
             </div>
             <h2>Are you the owner of this pharmacy?</h2>
             <div class="pharmacy-option">
                 <div class="Pharm-owner">
-                    <input type="radio" id="check-yes" name="Pharm-owner" checked/>
+                    <input type="radio" value="true" id="check-yes" name="AreYouPharmacyOwner" checked/>
                     <label for="check-yes">Yes</label>
                 </div>
                 <div class="Pharm-owner">
-                    <input type="radio" id="check-no" name="Pharm-owner"/>
+                    <input type="radio" value="false" id="check-no" name="AreYouPharmacyOwner"/>
                     <label for="check-no">No</label>
                 </div>
             </div>
             <div class="las-form">
                 <div class="form-group"> 
                     <label for="contact-info">Contact Information</label>
-                    <select id="state" name="state" onchange="populateLGAs()">
+                    <select id="state" name="State">
                       <option value=""disabled selected>Search States..</option>
                       <option value="abia">Abia</option>
                       <option value="adamawa">Adamawa</option>
@@ -116,22 +116,22 @@
                   </select>           
                   </div>
                     <div class="form-group">
-                    <input type="text" id="lga" name="lga" placeholder="Select LGA (Must choose a state first)">
+                    <input type="text" id="lga" name="LocalGovernment" placeholder="Select LGA (Must choose a state first)">
                     </div>
                 </div>
                 <div class="nex-form">
                     <div class="form-group">
-                 <input type="text" id="street-address" name="street-address" placeholder="Street Address">
+                 <input type="text" id="street-address" name="Address" placeholder="Street Address">
                     </div>
             </div>
             <h3>Pharmachain is free to use but we take 10% of the cost only when a sale is made. Do you agree to this?</h3>
-            <div class="pharmacy-request">
+            <div class="pharmacy-option">
                 <div class="Pharm-owner">
-                    <input type="radio" id="check-yes" name="Pharm-owner" checked/>
+                    <input type="radio" value="true" id="check-yes" name="AgreementToPay"/>
                     <label for="check-yes">Yes</label>
                 </div>
                 <div class="Pharm-owner">
-                    <input type="radio" id="check-no" name="Pharm-owner"/>
+                    <input type="radio" value="false" id="check-no" name="AgreementToPay"/>
                     <label for="check-no">No</label>
                 </div>
             </div>
@@ -153,10 +153,10 @@
         e.preventDefault(); // Prevent the default form submission
         const formData = new FormData(e.target);
         const formDataObj = Object.fromEntries(formData.entries());
-        /* const jsonString = JSON.stringify(formDataObj);
-         alert(jsonString);*/
+        const jsonString = JSON.stringify(formDataObj);
+        alert(jsonString);
         
-       axios.post('https://pharmachainnigltd-1.onrender.com/api/Pharmacy/CreatePharmacy')
+       axios.post('https://pharmachainnigltd-1.onrender.com/api/Pharmacy/CreatePharmacy', formDataObj)
         .then(response => {
             // Handle success
             alert(JSON.stringify(response.data));
