@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pharmachain|Smart Solutions</title>
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-text">
+                    <span class="pharma">PHARMA</span>
+                    <span class="chain">CHAIN</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Partner <span>&#9662;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="HMO.html">HMO</a></li>
+                        <li><a href="Hospital.html">Hospital</a></li>
+                        <li><a href="HEALTHCARE-PROFESSIONALS.html">Health Care Professionals</a></li>
+                        <li><a href="Pharmacy.html">Pharmacy</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pharmafast</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+            <a href="Createacct.html" class="cta-btn">Create a free account</a>
+        </nav>
+    </header>
+        <div class="main">
+           <div class="first-box">
+            <div class="left">
+            <h1>The smart solution  <br> for medicine </h1>
+            <h2>Accessibility</h2>
+            <p>Easily order and receive medicine for your <br> patients, employees and enrollees</p>
+            <a href="Createacct.html" class="cta-btn">Create a free account</a>
+            </div>
+            <div class="right">
+                <img src="images/1st img.png" alt="drugs" class="img-drugs" >
+            </div>
+           </div>
+           <div class="second-box">
+            <div class="left">
+                <img src="images/lappy.webp" alt="laptop" class="img-comp">
+            </div>
+            <div class="right">
+                <h1>An efficient and cost effective way for HMOs to enhance their enrollee medication management.</h1>
+                <h3>We understand the challenges HMOs face that is why we have created a streamlined and efficient system that makes it easy for you to request, deliver, and track medications for your enrollees.</h3>
+                <a href="Createacct.html" class="cta-btn">Create a free account</a>
+            </div>
+           </div>
+        </div>
+
+    <script>
+      document.addEventListener('click', function(e) {
+    const dropdown = document.querySelector('.dropdown');
+    const isDropdown = dropdown.contains(e.target);
+
+    if (!isDropdown) {
+        document.querySelector('.dropdown-content').style.display = 'none';
+    } else {
+        document.querySelector('.dropdown-content').style.display = 'block';
+    }
+});
+    </script>
+</body>
+</html>

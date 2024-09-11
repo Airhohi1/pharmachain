@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hmo|Become our Partner</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -33,7 +34,7 @@
         </div>
       <div class="box">
             <h1>Sign Up Details</h1>
-            <form action="/submit-signup" method="post"></form>
+            <form id="signupForm">
             <div class="form">
                <div class="form-group">
                   <label for="business-name">Business Name</label>
@@ -126,15 +127,46 @@
              </div>
           </div>
           <div class="button">
-          <input type="submit" value="Apply">
-          </div>
+            <button type="submit" class="button">Apply</button>
+        </div>
           <div class="terms">
               By Clicking 'Apply', you agree to our <a href="#">Terms and Conditions</a>
           </div>
           <div class="login-link">
-              Already have an account? <a href="Login.html">Login</a>
+              Already have an account? <a href="#">Login</a>
           </div>
       </div>
     </div>
+
+
+   <script>
+        const form = document.getElementById("signupForm");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault(); // Prevent the default form submission
+            const formData = new FormData(e.target);
+            const formDataObj = Object.fromEntries(formData.entries());
+
+            axios.post('https://pharmachainnigltd-1.onrender.com/api/Hmo/CreateHmo',
+            JSON.stringify(formDataObj),
+            {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }
+          )
+            .then(response => {
+                // Handle success
+                alert(JSON.stringify(response.data));
+                window.location.href = "null";
+            })
+            .catch(error => {
+                // Handle error
+                alert('Error fetching data:', + error.message);
+            });
+
+        });
+
+    </script>
+    
 </body>
 </html>

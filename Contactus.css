@@ -179,3 +179,7 @@
     left: calc(14% + 550px);
     border-radius: 8px;
 }
+.Contact-img{
+    width: 400px;
+    height: 120vh;
+}

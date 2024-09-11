@@ -7,109 +7,26 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <div class="sidebar sidebar-left">
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <!-- Add more items to demonstrate scrolling -->
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
-            <li>Item 7</li>
-            <li>Item 8</li>
-        </ul>
-    </div>
-    <div class="sidebar sidebar-right">
-        <ul>
-            <li>Item A</li>
-            <li>Item B</li>
-            <li>Item C</li>
-            <!-- Add more items to demonstrate scrolling -->
-            <li>Item D</li>
-            <li>Item E</li>
-            <li>Item F</li>
-            <li>Item G</li>
-            <li>Item H</li>
-        </ul>
+    <div class="main-section">
+        <div class="content">
+            <h1>The smart solution for medicine <span class="highlight">Accessibility</span></h1>
+            <p>Easily order and receive medicine for your patients, employees, and enrollees</p>
+            <a href="#" class="cta-btn">Create A Free Account</a>
+        </div>
+        <div class="stats-section">
+            <div class="stat">
+                <h2>84,372+</h2>
+                <p>Orders</p>
+            </div>
+            <div class="stat">
+                <h2>84,360+</h2>
+                <p>Delivered</p>
+            </div>
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Partners</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-.container{
-    display: flex;
-    margin-top: 80px;
-    background-color: #f4f4f4;
-  }
-  .side-menu {
-    width: 30%;
-    padding-left: 5px;
-    line-height:  20px;
-    font-size: 18px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .side-menu ul {
-    list-style: none;
-    align-items: baseline;
-    padding: 5px;
-  }
-  
-  .side-menu ul li {
-    margin-bottom: 10px;
-    width: 90%;
-  }
-  .menu-item {
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    padding: 5px 0;
-    white-space: nowrap; /* Prevents text from wrapping */
-  }
-  .side-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px;
-    display: block;
-    position: relative;
-  }
-  .side-menu ul li a.active::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: blue;
-    border-radius: 50%;
-  }
-  .side-menu ul li a:hover {
-    color: blue;
-  }
-  
-  .box{
-    width: 80%;
-    font-size: 18px;
-    font-weight: lighter;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-right: 20px;
-    line-height: 25px;
-    margin-left: 1%;
-  }
-  .sidebar {
-    background-color: #f4f4f4;
-    overflow-y: auto; /* Enable vertical scrolling */
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-  .sidebar-left {
-    left: 0;
-    padding-top: 3em;
-  }
-  
-  .sidebar-right {
-    right: 0;
-    padding-top: 3em;
-  }
-  http://127.0.0.1:5500/TandC.html i dont want a big space between the two boxes and i want a background

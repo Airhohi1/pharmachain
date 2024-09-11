@@ -1,40 +1,77 @@
-body {
-    display: flex;
+body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    overflow: hidden; /* Prevent body scrolling */
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
 
-.sidebar {
-    padding: 20px;
-    background-color: #f4f4f4;
-    overflow-y: auto; /* Enable vertical scrolling */
-    position: fixed;
-    top: 0;
-    bottom: 0;
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('images/1st\ img.png') no-repeat right center; /* Add background image */
+    background-size: contain; /* Adjust the size of the image */
+    background-color: #f7f8fa; /* Background color as seen on the left side */
+    height: 100vh; /* Full height */
 }
 
-.sidebar-left {
-    width: 400px; /* Smaller sidebar */
-    left: 0;
-    padding-top: 3em;
-    font-size: 3em;
+.content {
+    width: 50%;
 }
 
-.sidebar-right {
-    width: 800px; /* Larger sidebar */
-    right: 0;
-    padding-top: 3em;
-    font-size: 3em;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
+.content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
     margin-bottom: 10px;
+}
+
+.content .highlight {
+    color: #007bff; /* Highlight the "Accessibility" word */
+}
+
+.content p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    border-radius: 50px;
+    padding: 20px 50px;
+    color: #fff;
+    width: 40%;
+}
+
+.stats-section .stat {
+    text-align: center;
+}
+
+.stats-section .stat h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.stats-section .stat p {
+    font-size: 18px;
+    margin: 5px 0 0;
 }

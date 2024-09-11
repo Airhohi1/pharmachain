@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: gray;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    text-align: center;
+    color: white;
+}
+
+.pharma {
+    display: block;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.chain {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links li a.active, .nav-links li a:hover {
+    color: #007bff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    text-align: left;
+}
+
+.dropdown-content li a {
+    padding: 10px 0;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: lightgray;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+.main .first-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    width: 70%;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: Thin;
+    font-family: sans-serif;
+    z-index: 2;
+}
+.left p{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.left .cta-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+.right {
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+    width: 20%; /* Adjust width as needed */
+    z-index: 1;
+}
+.img-drugs{
+    width: 600px;
+    margin-top: 50px;
+}
+.right .image {
+    width: 2px;
+    height: 2px;
+    padding-right: -50px;
+    object-fit: cover; /* Ensures the image doesn't get squished */
+    border-radius: 20%; /* If you want the image itself to be circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    background: linear-gradient(to right, transparent, #f5f5f5);
+    object-fit: cover;
+}
+.second-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+.left{
+    align-items: flex-start;
+}
+.img-comp{
+    width: 550px;
+}
+.left .image{
+    width: 50px;
+    padding: 20px;
+}
+.right{
+    width: auto;
+    padding-right: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: -20px;
+}
+.right p {
+    margin: 0;
+    /* Limits the text width to keep it in one or two lines */
+    max-width: 250px;
+    text-align: left;
+    line-height: 1.5;
+    word-spacing: 1.5em;
+}
+.right .cta-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}

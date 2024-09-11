@@ -139,47 +139,25 @@
     </div>  
 
     <script>
-        const axios = require('axios').default;
-        // JavaScript to handle form submission
-        function register(e){
-     /*   document.getElementById('signupForm').addEventListener('submit', function(event) {*/
+        const form = document.getElementById("signupForm");
+        form.addEventListener("submit",(e)=>{
             e.preventDefault(); // Prevent the default form submission
-           alert("i was clicked");
+            const formData = new FormData(e.target);
+            const formDataObj = Object.fromEntries(formData.entries());
+             //const jsonString = JSON.stringify(formDataObj);
 
-         /*   const formData = new FormData(this);
-            alert(JSON.stringify(formData));*/
-            // Collect form data
-          /*  const formData = {
-                hospitalName: document.getElementById('business-name').value,
-                email: document.getElementById('email').value,
-                phoneNumber: document.getElementById('phone-number').value,
-                state: document.getElementById('state').value,
-                lga: document.getElementById('lga').value,
-                address: document.getElementById('address').value
-            };
-
-            // Send data to the backend using fetch
-            fetch('https://pharmachainnigltd-1.onrender.com/api/Hospital', { 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/form-data',
-                },
-                body: JSON.stringify(formData) // Convert the form data to JSON
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Handle success - perhaps display a success message or redirect
+            axios.post('https://pharmachainnigltd-1.onrender.com/api/Hospital/CreateHospital',formDataObj)
+            .then(response => {
+                // Handle success
+                alert(JSON.stringify(response.data));
+                window.location.href = "/Hospital2.html";
             })
             .catch(error => {
-                console.error('Error:', error);
-                // Handle error - perhaps display an error message
-            });*/
-        };
-        const form = document.getElementById("signupForm");
-
-        form.addEventListener("submit", register, true);
+                // Handle error
+                alert('Error fetching data:', error);
+            });
+        });
     </script>
     
 </body>
-</html>   
+</html>

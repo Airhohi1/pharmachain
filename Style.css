@@ -263,34 +263,24 @@
     margin-top: 5px;
     box-sizing: border-box;
 }
-.button {  
-    padding: 10px 20px;  
-    background-color: #007bff;  
-    color: white;  
-    border: none;  
-    align-items: center;
-    outline: none;
-    border-radius: 30px;  
-    cursor: pointer;  
-    font-size: 1.5em;
-    height: 1em;
-    margin-top: 1em;
-    transition: background-color 0.3s ease; /* Smooth transition */
-}  
-.button:hover {
-    background-color: #0056b3; /* Change to a darker blue on hover */
-}
-.button input {
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 15px;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    text-align: center;
+.button {
     width: 95%;
-    height: 95%;
+    background-color: #007bff;  
+    border-radius: 30px;
+    padding: 10px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.button button {
+    width: 100%;
+    background-color: inherit; /* Ensures the child button inherits the blue background */
+    color: inherit; /* Ensures the child button inherits the black text */
+    font-size: 16px;
+    line-height: 1; /* Control line height to prevent box growth */
+    padding: 5px 0;
 }
 .terms{
     font-size: 1.3em;
