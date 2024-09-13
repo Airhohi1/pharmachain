@@ -38,23 +38,23 @@
             <div class="form">
                <div class="form-group">
                   <label for="business-name">Business Name</label>
-                  <input type="text" id="business-name" name="business-name">
+                  <input type="text" id="business-name" name="BusinessName">
                </div>
                <div class="form-group">
                   <label for="cac-number">CAC Number</label>
-                  <input type="text" id="cac-number" name="cac-number">
+                  <input type="text" id="cac-number" name="CACNumber">
               </div>
             </div>
             <div class="lon-form">
               <div class="form-group">
                 <label for="email">Email Address (for correspondence)</label>
-                <input type="email" id="email" name="email">                
+                <input type="email" id="email" name="Email">                
               </div>
             </div>
             <div class="forms">
               <div class="form-group"> 
                 <label for="contact-info">Contact Information</label>
-                <select id="state" name="state" onchange="populateLGAs()">
+                <select id="state" name="State">
                   <option value=""disabled selected>Search States..</option>
                   <option value="abia">Abia</option>
                   <option value="adamawa">Adamawa</option>
@@ -95,18 +95,18 @@
               </select>           
               </div>
                 <div class="form-group">
-                <input type="text" id="lga" name="lga" placeholder="Select LGA (Must choose a state first)">
+                <input type="text" id="lga" name="LocalGovernment" placeholder="Select LGA (Must choose a state first)">
                 </div>
             </div>
             <div class="nex-form">
                 <div class="form-group">
-             <input type="text" id="street-address" name="street-address" placeholder="Street Address">
+             <input type="text" id="street-address" name="Address" placeholder="Street Address">
                 </div>
             </div>
             <div class="las-form">
              <div class="form-group">
                 <label for="patients">Number of patients in your care</label>
-                <select id="text" name="patients" onchange="Number">
+                <select id="text" name="NumberOfPatients">
                   <option value=""disabled selected>1-500,501-1000,1001-2000,etc...</option>
                   <option value="1-500">1-500</option>
                   <option value="501-1000">501-1000</option>
@@ -117,18 +117,19 @@
              </div>
              <div class="form-group">
                 <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number">
+                <input type="tel" id="phone-number" name="PhoneNumber">
              </div>
             </div>
             <div class="fin-form">
              <div class="form-group">
               <label for="help">How can Pharmachain help your organization?</label>
-              <textarea id="help" name="help"></textarea>
+              <textarea id="help" name="Message"></textarea>
              </div>
           </div>
           <div class="button">
             <button type="submit" class="button">Apply</button>
         </div>
+        </form>
           <div class="terms">
               By Clicking 'Apply', you agree to our <a href="#">Terms and Conditions</a>
           </div>
@@ -139,34 +140,28 @@
     </div>
 
 
-   <script>
-        const form = document.getElementById("signupForm");
-        form.addEventListener("submit",(e)=>{
-            e.preventDefault(); // Prevent the default form submission
-            const formData = new FormData(e.target);
-            const formDataObj = Object.fromEntries(formData.entries());
-
-            axios.post('https://pharmachainnigltd-1.onrender.com/api/Hmo/CreateHmo',
-            JSON.stringify(formDataObj),
-            {
-              headers: {
-                'Content-Type': 'application/json'
-              }
-            }
-          )
-            .then(response => {
-                // Handle success
-                alert(JSON.stringify(response.data));
-                window.location.href = "null";
-            })
-            .catch(error => {
-                // Handle error
-                alert('Error fetching data:', + error.message);
-            });
-
-        });
-
-    </script>
+    <script>
+      const form = document.getElementById("signupForm");
+      form.addEventListener("submit",(e)=>{
+          e.preventDefault(); // Prevent the default form submission
+          const formData = new FormData(e.target);
+          const formDataObj = Object.fromEntries(formData.entries());
+          const jsonString = JSON.stringify(formDataObj);
+          alert(jsonString);
+          
+         axios.post('https://pharmachainnigltd-1.onrender.com/api/Hmo/CreateHmo', formDataObj)
+          .then(response => {
+              // Handle success
+              alert(JSON.stringify(response.data));
+              window.location.href = "/Hospital2.html";
+          })
+          .catch(error => {
+              // Handle error
+              alert(JSON.stringify(error.message));
+          });
+      });
+          
+  </script>
     
 </body>
 </html>
